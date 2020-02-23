@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rudy.Models\Rudy.Models.csproj" />
+    <ProjectReference Include="..\Rudy.Repositories\Rudy.Persistence.csproj" />
+    <ProjectReference Include="..\Rudy.Common\Rudy.Common.csproj" />
+    <ProjectReference Include="..\Rudy.DTO\Rudy.DTO.csproj" />
+  </ItemGroup>
+</Project>
