@@ -14,7 +14,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Rudy.WebAPI' ">
     <StartAction>Project</StartAction>
-    <ApplicationURL>http://localhost:5000</ApplicationURL>
+    <ApplicationURL>http://localhost:5002</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
@@ -40,17 +40,5 @@
     <ProjectReference Include="..\Rudy.Repositories\Rudy.Persistence.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="FyS.WebAPI.textClipping" />
-    <None Remove=".DS_Store" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="appsettings %28colpia%29.Development.json" />
-    <Content Remove="appsettings %28colpia%29.json" />
-    <Content Remove="appsettings %28colpia%29.json" />
-    <Content Remove="appsettings %28copia%29.json" />
-    <Content Remove="appsettings.Staging.Development.json" />
   </ItemGroup>
 </Project>
