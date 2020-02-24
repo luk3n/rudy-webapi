@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Rudy.Services.Interfaces;
+using Rudy.Common.Configuration;
 using Rudy.Common.Data.Pagination;
 using Rudy.DTO;
 using System;
@@ -12,10 +13,12 @@ namespace Rudy.WebAPI.Controllers
     public class ClientController : ControllerBase
     {
         private readonly IClientService _clientService;
+        private readonly IConfigurationManager _configurationManager;
 
-        public ClientController(IClientService clientService)
+        public ClientController(IClientService clientService, IConfigurationManager configurationManager)
         {
             _clientService = clientService;
+            _configurationManager = configurationManager;
         }
 
         /// <summary>

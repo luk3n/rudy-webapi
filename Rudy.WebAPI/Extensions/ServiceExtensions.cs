@@ -9,6 +9,7 @@ using System.Reflection;
 using Rudy.Services;
 using NetCore.AutoRegisterDi;
 using Rudy.Persistence;
+using Rudy.Common.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 
@@ -42,6 +43,7 @@ namespace Rudy.WebAPI.Extensions
         public static void ConfigureServicesInjection(this IServiceCollection services)
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IConfigurationManager, ConfigurationManager>();
 
             var assemblyToScan = Assembly.GetAssembly(typeof(ClientService));
 
