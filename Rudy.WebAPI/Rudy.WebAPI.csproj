@@ -42,4 +42,15 @@
     </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="FyS.WebAPI.textClipping" />
+    <None Remove=".DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="appsettings %28colpia%29.Development.json" />
+    <Content Remove="appsettings %28colpia%29.json" />
+    <Content Remove="appsettings %28colpia%29.json" />
+    <Content Remove="appsettings %28copia%29.json" />
+    <Content Remove="appsettings.Staging.Development.json" />
+  </ItemGroup>
 </Project>
