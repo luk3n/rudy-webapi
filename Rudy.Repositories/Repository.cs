@@ -28,7 +28,7 @@ namespace Rudy.Persistence
             return await Context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<PagedResults<TEntity>> GetAll(PagingOptions options)
+        public virtual async Task<PagedResults<TEntity>> GetAll(PagingOptions options)
         {
             return await Context.Set<TEntity>().Paginate(options);
         }

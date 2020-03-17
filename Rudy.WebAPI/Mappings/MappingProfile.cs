@@ -12,8 +12,11 @@ namespace Rudy.WebAPI.Mappings
             CreateMap<Client, ClientDTO>(); // ???
             CreateMap<Client, CreateResponseDTO>();
             CreateMap<ClientDTO, Client>();
+            CreateMap<Product, ProductDTO>();
             CreateMap<ClientDTOEdit, Client>();
-            CreateMap<PagedResults<Client>, PagedResults<ClientDTO>>(); 
+            CreateMap<PagedResults<Client>, PagedResults<ClientDTO>>();
+            CreateMap<PagedResults<Product>, PagedResults<ProductDTO>>();
+            CreateMap<Category, CategoryDTO>();
         }
     }
 }

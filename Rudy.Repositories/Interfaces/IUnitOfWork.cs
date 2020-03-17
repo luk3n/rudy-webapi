@@ -7,6 +7,7 @@ namespace Rudy.Persistence
     public interface IUnitOfWork : IDisposable
     {
         IClientRepository Clients { get; }
+        IProductRepository Products { get; }
         Task<int> Complete();
     }
 }

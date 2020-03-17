@@ -1,5 +1,4 @@
-﻿using Rudy.Common.Data.Pagination;
-using Rudy.Models;
+﻿using Rudy.Models;
 
 namespace Rudy.Persistence.Repositories
 {

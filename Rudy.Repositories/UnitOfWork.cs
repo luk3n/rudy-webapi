@@ -11,9 +11,11 @@ namespace Rudy.Persistence
         {
             _context = context;
             Clients = new ClientRepository(_context);
+            Products = new ProductRepository(_context);
         }
 
         public IClientRepository Clients { get; private set; }
+        public IProductRepository Products { get; private set; }
 
         public async Task<int> Complete()
         {
