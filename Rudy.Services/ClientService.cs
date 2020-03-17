@@ -23,7 +23,7 @@ namespace Rudy.Services
         
         public async Task<ClientDTO> GetClient(int id)
         {
-            var clientModel = await _unitOfWork.Clients.SingleOrDefault(c => c.Id == id);
+            var clientModel = await _unitOfWork.Clients.SingleOrDefault(c => c.id == id);
 
             return _mapper.Map<ClientDTO>(clientModel);
         }
@@ -72,7 +72,7 @@ namespace Rudy.Services
         {
             try
             {
-                var client = await _unitOfWork.Clients.SingleOrDefault(c => c.Id == id);
+                var client = await _unitOfWork.Clients.SingleOrDefault(c => c.id == id);
 
                 if (client != null)
                 {

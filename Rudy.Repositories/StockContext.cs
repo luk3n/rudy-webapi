@@ -19,6 +19,9 @@ namespace Rudy.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Client>().ToTable("clients");
+            modelBuilder.Entity<Product>().ToTable("products");
+            modelBuilder.Entity<Category>().ToTable("productCategories");
+            modelBuilder.Entity<LineItem>().ToTable("lineItems");
         }
     }
 }
