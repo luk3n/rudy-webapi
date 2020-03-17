@@ -55,8 +55,7 @@ namespace Rudy.WebAPI.Extensions
         public static void ConfigureEF(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<StockContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("fysdb"), 
-                builder => builder.UseRowNumberForPaging()));
+                options.UseSqlServer(configuration.GetConnectionString("fysdb")));
         }
     }
 }
