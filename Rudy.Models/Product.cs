@@ -5,17 +5,17 @@ namespace Rudy.Models
 {
     public class Product
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string brand { get; set; }
-        public string code { get; set; }
-        public string barcode { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Brand { get; set; }
+        public string Code { get; set; }
+        public string Barcode { get; set; }
         [Column(TypeName = "decimal(18,2)")]
-        public decimal price { get; set; }
-        public int measurementUnit { get; set; }
-        public DateTime creationDate { get; set; }
-        public LineItem lineItem { get; set; }
-        public Category category { get; set; }
+        public decimal Price { get; set; }
+        public int MeasurementUnit { get; set; }
+        public DateTime CreationDate { get; set; }
+        public LineItem LineItem { get; set; }
+        public Category Category { get; set; }
     }
 }

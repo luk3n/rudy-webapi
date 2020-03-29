@@ -4,9 +4,9 @@ namespace Rudy.Models
 {
     public class LineItem
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public List<Product> products { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

@@ -16,11 +16,21 @@ namespace Rudy.Persistence.Repositories
 
         public override async Task<PagedResults<Product>> GetAll(PagingOptions options)
         {
-            //return await StockContext.Products.Include(prod => prod.category).Paginate(options);
             return await StockContext.Products.Select(p => new Product
             {
-                name = p.name,
-                category = p.category
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                Brand = p.Brand,
+                Code = p.Code,
+                Barcode = p.Barcode,
+                Price = p.Price,
+                MeasurementUnit = p.MeasurementUnit,
+                CreationDate = p.CreationDate,
+                Category = new Category
+                {
+                    Name = p.Category.Name
+                }
             }).Paginate(options);
         }
 
