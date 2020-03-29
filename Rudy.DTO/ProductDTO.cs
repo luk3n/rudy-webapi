@@ -10,7 +10,6 @@ namespace Rudy.DTO
         public string Code { get; set; }
         public string Barcode { get; set; }
         public decimal Price { get; set; }
-        public int measurementUnit { get; set; }
         public DateTime CreationDate { get; set; }
         public CategoryDTO Category { get; set; }
     }

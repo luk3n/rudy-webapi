@@ -17,6 +17,7 @@
     <Folder Include="Repositories\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositories\Interfaces\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ClientRepository.cs" />

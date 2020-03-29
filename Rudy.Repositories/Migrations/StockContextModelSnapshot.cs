@@ -21,110 +21,110 @@ namespace Rudy.Persistence.Migrations
 
             modelBuilder.Entity("Rudy.Models.Category", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("description")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.ToTable("productCategories");
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("Rudy.Models.Client", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.ToTable("clients");
+                    b.ToTable("Clients");
                 });
 
             modelBuilder.Entity("Rudy.Models.LineItem", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("description")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.ToTable("lineItems");
+                    b.ToTable("LineItems");
                 });
 
             modelBuilder.Entity("Rudy.Models.Product", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("barcode")
+                    b.Property<string>("Barcode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("brand")
+                    b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("categoryid")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("code")
+                    b.Property<string>("Code")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("creationDate")
+                    b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("description")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("lineItemid")
+                    b.Property<int?>("LineItemId")
                         .HasColumnType("int");
 
-                    b.Property<int>("measurementUnit")
+                    b.Property<int>("MeasurementUnit")
                         .HasColumnType("int");
 
-                    b.Property<string>("name")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("price")
+                    b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.HasIndex("categoryid");
+                    b.HasIndex("CategoryId");
 
-                    b.HasIndex("lineItemid");
+                    b.HasIndex("LineItemId");
 
-                    b.ToTable("products");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Rudy.Models.Product", b =>
                 {
-                    b.HasOne("Rudy.Models.Category", "category")
-                        .WithMany("products")
-                        .HasForeignKey("categoryid");
+                    b.HasOne("Rudy.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
 
-                    b.HasOne("Rudy.Models.LineItem", "lineItem")
-                        .WithMany("products")
-                        .HasForeignKey("lineItemid");
+                    b.HasOne("Rudy.Models.LineItem", "LineItem")
+                        .WithMany("Products")
+                        .HasForeignKey("LineItemId");
                 });
 #pragma warning restore 612, 618
         }

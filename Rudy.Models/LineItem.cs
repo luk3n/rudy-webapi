@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Rudy.Models
 {
+    [Table("LineItems")]
     public class LineItem
     {
         public int Id { get; set; }
