@@ -29,7 +29,19 @@ namespace Rudy.WebAPI.Controllers
         [HttpGet("{id:int}", Name = "byId")]
         public async Task<IActionResult> GetClient(int id)
         {
-            var result = await _clientService.GetClient(id);
+            ClientDTO result;
+
+            try
+            {
+                result = await _clientService.GetClient(id);
+
+                if (result == null)
+                    return StatusCode(404, "No such client found with that id.");
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal server error");
+            }
 
             return Ok(result);
         }
